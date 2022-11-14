@@ -1,0 +1,1 @@
+void MemoryAllocationFun(int value);
