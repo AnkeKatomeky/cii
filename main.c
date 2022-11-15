@@ -7,6 +7,10 @@
 #include "my/PointerFeaver/PointerFeaver.c"
 #include "my/MemoryAllocation/MemoryAllocation.h"
 #include "my/MemoryAllocation/MemoryAllocation.c"
+#include "my/StructsDefs/StructsDefs.h"
+#include "my/StructsDefs/StructsDefs.c"
+#include "my/FIlesFuns/FIlesFuns.h"
+#include "my/FIlesFuns/FIlesFuns.c"
 
 int globalIntVar = 3;             // it is a global variable
 const float constantValue = 3.14; // it is constant in global
@@ -45,12 +49,14 @@ int main()
     intPointer = &number;                       // get reference from variable to pointer(without & is will be a value and overwise is become a reference)
 
     // if we write intPointer = number it will reference to a memory location on address 0011(or what we send on input)
-    printf("Number have %ld bits \n", sizeof(number) * 8);    // format specifier %d - digit(%ld - for long)
+    printf("Number have %ld bits \n", sizeof(number) * 8);       // format specifier %d - digit(%ld - for long)
     printf("Power 2 of %d = %3.2f \n", number, GetPow2(number)); // format specifier %f - fraction(%<length>.<frac length>f - extra formatting)
     printf("Factorial of %d = %3.2f \n", number, GetFactorial(number));
 
     Foo(number); // function invocation
     PointerPlayground(number);
     MemoryAllocationFun(number);
+    DoSomethingWhitStructs(number);
+    FileFun(number);
     return 0;
 }

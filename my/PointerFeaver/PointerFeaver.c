@@ -2,6 +2,9 @@
 
 int PointerPlayground(int value)
 {
+    printf("\n");
+    printf("Pointer feaver \n");
+
     //* - dereferencing operator
     //* - to pointers to get value; & - to anything to get pointer; otherwise pointer will be a address
     // standard workflow of pointers
@@ -55,6 +58,7 @@ int PointerPlayground(int value)
     //*constantOfConstantPointer = 13 it can't change value
     // constantOfConstantPointer = &b it can't change reference
 
+    printf("\n");
     // arrays and pointers
     int d[] = {1, 2, 3, 4, 5};   // general array of ints
     int d1[5] = {1, 2, 3, 4, 5}; // size can be explicitly written
