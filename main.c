@@ -12,11 +12,33 @@
 #include "my/FIlesFuns/FIlesFuns.h"
 #include "my/FIlesFuns/FIlesFuns.c"
 
+#define _WIN32_WINNT 0x0A00
+#include <windows.h>
+
 int globalIntVar = 3;             // it is a global variable
 const float constantValue = 3.14; // it is constant in global
 
 int main()
 {
+    HWND handler = GetConsoleWindow();
+
+    LPPOINT lpPointer = malloc(sizeof(*lpPointer));
+    do
+    {
+        GetCursorPos(lpPointer);
+        printf("Press escape to continue %d %d\n", lpPointer->x, lpPointer->y);
+        Sleep(100);
+    } while (GetKeyState(VK_ESCAPE) >= 0);
+
+    HDC descriptor = GetDC(handler);
+    SelectObject(descriptor, GetStockObject(DC_BRUSH));
+    SetDCBrushColor(descriptor, RGB(255, 0, 255));
+        Sleep(100);
+    do
+    {
+        Rectangle(descriptor, 100, 100, 500, 500);
+    } while (GetKeyState(VK_ESCAPE) >= 0);
+
     int number = 3;  // standard variable. it is local scoped
     externValue = 1; // its extern variable in myHellower
 

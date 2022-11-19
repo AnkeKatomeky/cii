@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "memoryallocation.h": "c"
+        "memoryallocation.h": "c",
+        "w32api.h": "c"
     }
 }
