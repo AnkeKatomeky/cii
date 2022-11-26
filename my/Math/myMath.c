@@ -1,3 +1,5 @@
+#include "myMath.h"
+
 double GetPow2(double number)
 {
     return number * number;

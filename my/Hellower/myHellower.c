@@ -1,3 +1,5 @@
+#include "myHellower.h"
+
 int externValue; // as in header file we must implement externed variable 
 
 int Foo(int value) // function (not method - it's not oop)

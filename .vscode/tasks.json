@@ -8,9 +8,7 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "${workspaceFolder}/main.c",
-                "-lgdi32",
-                "-o",
-                "${workspaceFolder}/bin/main.exe"
+                "-o", "${workspaceFolder}/bin/main.exe"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"

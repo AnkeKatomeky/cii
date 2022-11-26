@@ -1,18 +1,12 @@
 #include <stdio.h>
 #include "my/Math/myMath.h"         //in .h(header files) are placed defenitions of somethings
-#include "my/Math/myMath.c"         //in .c(source files) are placed implementations of .h files
-#include "my/Hellower/myHellower.h" //always include .h and when .c files
-#include "my/Hellower/myHellower.c"
+#include "my/Hellower/myHellower.h" 
 #include "my/PointerFeaver/PointerFeaver.h"
-#include "my/PointerFeaver/PointerFeaver.c"
 #include "my/MemoryAllocation/MemoryAllocation.h"
-#include "my/MemoryAllocation/MemoryAllocation.c"
 #include "my/StructsDefs/StructsDefs.h"
-#include "my/StructsDefs/StructsDefs.c"
 #include "my/FIlesFuns/FIlesFuns.h"
-#include "my/FIlesFuns/FIlesFuns.c"
 
-#define _WIN32_WINNT 0x0A00
+//#define _WIN32_WINNT 0x0A00
 #include <windows.h>
 
 int globalIntVar = 3;             // it is a global variable

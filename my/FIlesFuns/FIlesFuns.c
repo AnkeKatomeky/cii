@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "FIlesFuns.h"
 
 void FileFun(int value)
 {

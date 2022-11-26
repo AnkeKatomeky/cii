@@ -1,3 +1,5 @@
+#include "StructsDefs.h"
+
 // typedef struct // type definition same as struct usually and all definitions must be placed above using it
 // {
 //     char *Name;
